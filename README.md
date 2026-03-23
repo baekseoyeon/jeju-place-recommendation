@@ -1,5 +1,9 @@
 # jeju-place-recommendation
 
+<p align="center">
+  <img src="image/main.png" width="720" />
+</p>
+
 제주 지역 장소 데이터를 바탕으로, 사용자 질문 맥락에 맞는 추천 결과와 추천 이유를 제공하는 LLM·RAG 기반 프로젝트입니다.
 
 ## Overview
@@ -27,6 +31,10 @@ D. 검색 결과를 바탕으로 추천 결과와 이유를 포함한 응답 생
 E. 웹 인터페이스에서 결과 출력  
 
 ## Place definition
+
+<p align="center">
+  <img src="image/place.png" width="720" />
+</p>
 
 이 프로젝트에서는 제주 지역 장소를 다음 기준으로 구분했습니다.
 
@@ -128,7 +136,8 @@ streamlit run run/alphastorm_app.py
 ├── docs/
 │   └── PROJECT.md
 ├── image/
-│   └── image.png
+│   └── main.png
+│   └── place.png
 ├── run/
 │   ├── alphastorm_app.py
 │   ├── sentences.py
@@ -146,9 +155,6 @@ streamlit run run/alphastorm_app.py
 
 #### `image/`
 프로젝트 관련 이미지를 저장하는 폴더입니다.
-
-- `image.png`  
-  서비스 화면 또는 설명용 이미지
 
 #### `run/`
 실행 코드와 전처리 스크립트를 모아둔 폴더입니다.
