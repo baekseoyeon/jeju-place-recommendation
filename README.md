@@ -1,13 +1,10 @@
 # jeju-place-recommendation
 
-<p align="center">
-  <img src="image/main.png" width="800" alt="Overview" />
-</p>
-
-제주 지역 음식점 데이터를 바탕으로, 사용자 질문 맥락에 맞는 추천 결과와 추천 이유를 제공하는 LLM-RAG 기반의 '생성형 AI 활용 맛집 추천 서비스' 프로젝트입니다.
+제주 지역 장소 데이터를 바탕으로, 사용자 질문 맥락에 맞는 추천 결과와 추천 이유를 제공하는 LLM·RAG 기반 프로젝트입니다.
 
 ## Overview
- 
+
+jeju-place-recommendation은 제주 지역 장소 추천 문제를 다룬 프로젝트입니다.  
 인기 장소만 반복 추천하는 방식의 한계를 줄이기 위해, 장소를 HOT / COOL / COLD 플레이스로 구분하고 사용자 질문에 맞는 추천 응답을 생성하도록 구성했습니다.
 
 이 레포는 다음 작업을 중심으로 정리되어 있습니다.
@@ -18,14 +15,6 @@
 - FAISS 기반 검색 구조 구성
 - LLM 프롬프트 엔지니어링
 - Streamlit 기반 웹 프로토타입 구현
-
-## What this repository covers
-
-- 제주 지역 장소 추천 서비스 기획
-- 장소 데이터 구조화 및 전처리
-- BM25 · FAISS 기반 RAG 파이프라인
-- 사용자 질문 맥락 반영 응답 설계
-- 추천 이유를 포함한 설명형 응답 구현
 
 ## Service flow
 
@@ -116,38 +105,62 @@ pip install -r requirements.txt
 #### (1) 임베딩 생성 및 저장
 
 ```bash
-python embeddings.py
+python run/embeddings.py
 ```
 
 #### (2) 데이터 전처리
 
 ```bash
-python chunking.py
-python sentences.py
+python run/chunking.py
+python run/sentences.py
 ```
 
 #### (3) 웹 애플리케이션 실행
 
 ```bash
-streamlit run alphastorm_app.py
+streamlit run run/alphastorm_app.py
 ```
 
 ## Repository structure
 
+```bash
+.
+├── docs/
+│   └── PROJECT.md
+├── image/
+│   └── image.png
+├── run/
+│   ├── alphastorm_app.py
+│   ├── sentences.py
+│   ├── chunking.py
+│   └── embeddings.py
+```
+
+### Folder guide
+
+#### `docs/`
+프로젝트 설명 문서를 정리한 폴더입니다.
+
+- `PROJECT.md`  
+  프로젝트 목적, 구조, 주요 작업 정리
+
+#### `image/`
+프로젝트 관련 이미지를 저장하는 폴더입니다.
+
+- `image.png`  
+  서비스 화면 또는 설명용 이미지
+
+#### `run/`
+실행 코드와 전처리 스크립트를 모아둔 폴더입니다.
+
 - `embeddings.py`  
   임베딩 생성 및 저장
-
 - `chunking.py`  
   데이터 chunk 단위 전처리
-
 - `sentences.py`  
   문장 단위 데이터 정리
-
 - `alphastorm_app.py`  
   Streamlit 기반 웹 애플리케이션 실행 파일
-
-- `data/`  
-  장소 데이터 저장 경로
 
 ## My role
 
