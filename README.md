@@ -1,7 +1,7 @@
 # jeju-place-recommendation
 
 <p align="center">
-  <img src="image/main.png" width="800" alt="LLaPo-chat Overview" />
+  <img src="image/main.png" width="800" alt="Overview" />
 </p>
 
 제주 지역 음식점 데이터를 바탕으로, 사용자 질문 맥락에 맞는 추천 결과와 추천 이유를 제공하는 LLM-RAG 기반의 '생성형 AI 활용 맛집 추천 서비스' 프로젝트입니다.
